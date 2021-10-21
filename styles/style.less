@@ -11,15 +11,54 @@ body {
   background-color: @main-background;
   color: @main-text-color;
 	font-family: @font;
-  
-
+  font-size: 16px;
 }
 
 // Header
-
 header{
   position: relative;
   height: 400px;
   background-image: url(../images/image-hero-desktop.jpg);
-  background: l;
+  background-position: center;
+  background-repeat: no-repeat;
+  
+  .header-wrap{
+    padding: 35px 155px;
+
+    .menu-wrap{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      .menu{
+        .logo, ul{
+          cursor: pointer;
+        }
+
+        ul{
+          position: relative;
+          display: flex;
+          column-gap: 33px;
+          list-style-type: none;
+          padding: 0;
+          font-size: 14px;
+          font-weight: 500;
+
+          li:before{
+            content: '';
+            display: block;
+            border-bottom: 3px solid white;
+            width: auto;
+          }
+        }
+
+      }
+
+    }
+  }
+  
+  
+
 }
+
+
