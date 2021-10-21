@@ -89,7 +89,7 @@ main{
   margin-top: -100px;
   // z-index: 100;
 
-  .wrap-sections{
+  .sections-wrap{
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -103,9 +103,111 @@ main{
       box-shadow: 0px 0px 1px 1px rgba(199, 199, 199, 0.137);
       background-color: @block-background;
       border-radius: 7px;
+      padding: 20px 15px;
+
+      button{
+        width: 185px;
+        height: 51px;
+        color: @white-color;
+        border: none;
+        border-top-left-radius: 50px;
+        border-bottom-left-radius: 50px;
+        border-top-right-radius: 50px;
+        border-bottom-right-radius: 50px;
+        background-color: @button-color;
+        cursor: pointer;
+        font-weight: 700;
+        transition: background .3s;
+
+        &:hover{
+          background-color: @button-color-hover;
+        }
+      }
 
       &:nth-child(1){
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
         height: 230px;
+        position: relative;
+
+        img{
+          position: absolute;
+          top: -28px;
+        }
+
+        h3{
+          font-size: 25px;
+          color: @black;
+          text-transform: capitalize;
+          margin-top: 0;
+        }
+        
+        span{
+          margin: -5px 0px 40px 0px;
+          font-size: 14px;
+        }
+
+        .buttons-wrap{
+          display: flex;
+          justify-content: space-between;
+          width: 90%;
+
+          .bookmarked{
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 185px;
+            height: 51px;
+            background-color: @button-marked;
+            border-top-left-radius: 50px;
+            border-bottom-left-radius: 50px;
+            border-top-right-radius: 50px;
+            border-bottom-right-radius: 50px;
+            color: @button-color;
+            font-weight: 700;
+            cursor: pointer;
+
+            div{
+              position: absolute;
+              left: 0px;
+              width: 50px;
+              height: 50px;
+              background-color: @button-color;
+              border-radius: 50%;
+              transition: left .5s;
+
+              svg{
+                position: relative;
+                left: -3px;
+                top: -2px;
+                fill: white !important;
+              }
+            }
+
+            b{
+              position: relative;
+              margin-left: 65px;
+              transition: all .5s;
+            }
+
+          }
+
+          .activeMarked{
+              div{
+                left: 100% - 25px;
+                background-color: @button-color-hover;
+              }
+
+              b{
+                color: @button-color-hover;
+                margin-left: 20px;
+              }
+          }
+
+        }
       }
     }
 
