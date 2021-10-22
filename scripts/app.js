@@ -13,11 +13,14 @@ const popClose = $('.popUp img');
 const backProject = $('.buttons-wrap > button');
 const backProjChoose = $('.wrap-proj');
 const disabled = $('.disabled');
+const reward = $('.select button');
+const ul = $('ul');
+const section = $('.sections-wrap > section')
 
 marked.addEventListener('click', function () {
 	marked.classList.toggle('activeMarked');
 	bookmarked.innerHTML = marked.classList[1] ? 'Bookmarked' : 'Add bookmark'
-	addBookmark(this)
+	addBookmark(this);
 })
 
 rangeLine.style.width = (parseFloat(current) * 100) / parseFloat(total) + '%';
@@ -44,6 +47,13 @@ function addBookmark(el, url, title) {
 		}
 	}
 	return false;
+}
+
+function scroll(top) {
+	window.scrollTo({
+		top: top,
+		behavior: 'smooth'
+	});
 }
 
 backProject.addEventListener('click', () => {
@@ -84,6 +94,29 @@ backProjChoose.forEach(e => {
 		else e.classList.remove('active');
 
 	})
+})
+
+reward.forEach(el => {
+	el.addEventListener('click', e => {
+		if (!e.target.parentNode.parentNode.classList[0]) {
+			popUp.style.display = 'flex';
+			setTimeout(() => showHidePopUp('1'), 0);
+			backProjChoose.forEach((el, ind) => {
+				el.classList.remove('active')
+				if (ind == e.target.dataset.id)
+					el.classList.add('active')
+			});
+		}
+	});
+});
+
+
+ul.addEventListener('click', ul => {
+	switch (ul.target.innerHTML) {
+		case 'About': scroll(section[2].offsetTop + 275); break;
+		case 'Discover': scroll(section[1].offsetTop + 275); break;
+		case 'Get Started': console.log('Get Started'); break;
+	}
 })
 
 

@@ -23,8 +23,6 @@ body {
   font-size: 16px;
 }
 
-
-
 // Header
 header{
   position: relative;
@@ -82,7 +80,6 @@ header{
             &:hover:before{
               width: 100%;
               left: 0px;
-              
             }
           }
         }
@@ -408,6 +405,7 @@ main{
   }
 }
 
+//Pop-up
 .popUp-wrap{
   display: none;
   opacity: 0; 
@@ -416,13 +414,14 @@ main{
   z-index: 999;
   background-color: rgba(128, 128, 128, 0.377);
   width: 100%;
-  padding-top: 90px;
+  padding-top: 40px;
   transition: all .3s;
   cursor: alias;
 
   .popUp{
+
     padding: 20px 30px;
-    position: relative;
+    position: fixed;
     width: 650px;
     height: 820px;
     background-color: white;
@@ -476,6 +475,7 @@ main{
     .titleProj{
       display: flex;
       justify-content: space-between;
+      height: 39px;
 
       h4:last-child{
         display: flex;
@@ -484,7 +484,6 @@ main{
 
         &:hover{
           color: @black;
-
         }
         
         span{
@@ -492,6 +491,7 @@ main{
           top: 1px;
           color: @article-color;
           margin-left: 15px;
+          font-weight: 500;
         }
       }
     }
@@ -532,7 +532,7 @@ main{
       }
 
       &:hover{
-        color: #3bb3ab;
+        color: #3bb3ab !important;
       }
     }
 
