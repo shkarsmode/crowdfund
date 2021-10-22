@@ -409,8 +409,8 @@ main{
 }
 
 .popUp-wrap{
-  display: flex; // none!!!
-  opacity: 1; // 0 !!!
+  display: none;
+  opacity: 0; 
   justify-content: center;
   position: absolute;
   z-index: 999;
@@ -472,6 +472,30 @@ main{
         font-style: normal;
       }
     }
+
+    .titleProj{
+      display: flex;
+      justify-content: space-between;
+
+      h4:last-child{
+        display: flex;
+        align-items: center;
+        margin-right: 16px;
+
+        &:hover{
+          color: @black;
+
+        }
+        
+        span{
+          position: relative;
+          top: 1px;
+          color: @article-color;
+          margin-left: 15px;
+        }
+      }
+    }
+
   }
 
   .wrap-proj{

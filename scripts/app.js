@@ -22,7 +22,6 @@ marked.addEventListener('click', function () {
 
 rangeLine.style.width = (parseFloat(current) * 100) / parseFloat(total) + '%';
 popUp.style.height = document.body.offsetHeight + 'px';
-// popUp.style.opacity = '1';
 
 if (disable) disable.innerHTML = 'Out of stock';
 
@@ -76,7 +75,6 @@ function showHidePopUp(par) {
 }
 
 backProjChoose.forEach(e => {
-
 	e.addEventListener('click', () => {
 		if (e.classList[0] != 'disabled')
 			backProjChoose.forEach(e =>
