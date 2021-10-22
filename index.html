@@ -10,6 +10,104 @@
 </head>
 
 <body>
+	<!-- PopUp -->
+	<div class="popUp-wrap">
+		<div class="popUp">
+			<img src="./images/icon-close-modal.svg" alt="">
+			<h3>Back this project</h3>
+			<span>Want to support us in bringing Mastercraft Bamboo Monitor Riser out in the world?</span>
+			<div class="active wrap-proj">
+				<div class="backProj">
+					<div class="back-circle">
+						<div class="circle"></div>
+					</div>
+					<div>
+						<h4>Pledge with no reward</h4>
+						<span>Choose to support us without a reward if you simply believe in our project. As a backer, you will be signed up to receive product updates via email.</span>
+				</div>
+				</div>
+				<div class="pay">
+					<div class="line"></div>
+					<div class="enterPrice">
+						<span>Enter your piedge</span>
+						<div>
+							<span>$</span>
+							<input type="number" min='0' value='0'>
+							<button>Continue</button>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="wrap-proj">
+				<div class="backProj">
+					<div class="back-circle">
+						<div class="circle"></div>
+					</div>
+					<div>
+						<h4>Bamboo Stand<i>Pledge $25 or more</i></h4>
+						<span>You get an ergonomic stand made of natural bamboo. You've helped us launch our promotional campaign, and you’ll be added to a special Backer member list.</span>
+				</div>
+				</div>
+				<div class="pay">
+					<div class="line"></div>
+					<div class="enterPrice">
+						<span>Enter your piedge</span>
+						<div>
+							<span>$</span>
+							<input type="number" min='25' value='25'>
+							<button>Continue</button>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="wrap-proj">
+				<div class="backProj">
+					<div class="back-circle">
+						<div class="circle"></div>
+					</div>
+					<div>
+						<h4>Black Edition Stand<i>Pledge $75 or more</i></h4>
+						<span>You get an ergonomic stand made of natural bamboo. You've helped us launch our promotional campaign, and you’ll be added to a special Backer member list.</span>
+				</div>
+				</div>
+				<div class="pay">
+					<div class="line"></div>
+					<div class="enterPrice">
+						<span>Enter your piedge</span>
+						<div>
+							<span>$</span>
+							<input type="number" min='75' value='75'>
+							<button>Continue</button>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="disabled wrap-proj">
+				<div class="backProj">
+					<div class="back-circle">
+						<div class="circle"></div>
+					</div>
+					<div>
+						<h4>Bamboo Stand<i>Pledge $200 or more</i></h4>
+						<span>You get an ergonomic stand made of natural bamboo. You've helped us launch our promotional campaign, and you’ll be added to a special Backer member list.</span>
+				</div>
+				</div>
+				<div class="pay">
+					<div class="line"></div>
+					<div class="enterPrice">
+						<span>Enter your piedge</span>
+						<div>
+							<span>$</span>
+							<input type="number" min='0' value='0'>
+							<button>Continue</button>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+		</div>
+	</div>
+
 	<!-- Header -->
 	<header>
 		<div class="header-wrap">
@@ -36,15 +134,15 @@
 				<span>A beautiful & handcrafted monitor stand to reduce neck and eye strain.</span>
 				<div class="buttons-wrap">
 					<button>Back this project</button>
-					<div class="bookmarked"><b>Bookmarked</b><div><svg xmlns="http://www.w3.org/2000/svg" width="35" height="45"><g fill="black;" fill-rule="evenodd"><path d="M23 19v18l5-5.058L33 37V19z"/></g></svg></div></div>
+					<div class="bookmarked"><b>Add bookmark</b><div><svg xmlns="http://www.w3.org/2000/svg" width="35" height="45"><g fill="black;" fill-rule="evenodd"><path d="M23 19v18l5-5.058L33 37V19z"/></g></svg></div></div>
 				</div>
 			</section>
 
 			<section>
 				<div class="flex-content">
 					<div class="content-range">
-						<h3>$89,814</h3>
-						<span>of $100,000 backed</span>
+						<h3 id="current">$65,914</h3>
+						<span>of <span id="total">$100,000</span> backed</span>
 					</div>
 					<div class="vert-line"></div>
 					<div class="content-range">
@@ -64,13 +162,51 @@
 				</div>
 
 			</section>	
-
-			<section>
 				
+			<section>
+				<h3>About this project</h3>
+				<p>The Mastercraft Bamboo Monitor Riser is a sturdy and stylish platform that elevates your screen to a more comfortable viewing height. Placing your monitor at eye level has the potential to improve your posture and make you more comfortable while at work, helping you stay focused on the task at hand.</p>
+				<p>Featuring artisan craftsmanship, the simplicity of design creates extra desk space below your computer to allow notepads, pens, and USB sticks to be stored under the stand.</p>
+				<div>
+					<div class="reward-name">
+						<h3>Bamboo Stand</h3><span>Pledge $25 or more</span>
+					</div>
+					<div class="text-reward">
+						You get an ergonomic stand made of natural bamboo. You've helped us launch our promotional campaign, and you’ll be added to a special Backer member list.
+					</div>
+					<div class="select">
+						<h2>101 <span>left</span></h2>
+						<button>Select Reward</button>
+					</div>
+				</div>
+				<div>
+					<div class="reward-name">
+						<h3>Bamboo Stand</h3><span>Pledge $25 or more</span>
+					</div>
+					<div class="text-reward">
+						You get an ergonomic stand made of natural bamboo. You've helped us launch our promotional campaign, and you’ll be added to a special Backer member list.
+					</div>
+					<div class="select">
+						<h2>101 <span>left</span></h2>
+						<button>Select Reward</button>
+					</div>
+				</div>
+
+				<div class="disable">
+					<div class="reward-name">
+						<h3>Bamboo Stand</h3><span>Pledge $25 or more</span>
+					</div>
+					<div class="text-reward">
+						You get an ergonomic stand made of natural bamboo. You've helped us launch our promotional campaign, and you’ll be added to a special Backer member list.
+					</div>
+					<div class="select">
+						<h2>101 <span>left</span></h2>
+						<button>Select Reward</button>
+					</div>
+				</div>
 			</section>		
 		</div>
 	</main>
-
 
 	<script src="./scripts/app.js"></script>
 </body>
