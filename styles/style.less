@@ -99,7 +99,7 @@ main{
   
     section{
       width: 100%;
-      min-height: 180px;
+      min-height: 170px;
       box-shadow: 0px 0px 1px 1px rgba(199, 199, 199, 0.137);
       background-color: @block-background;
       border-radius: 7px;
@@ -205,6 +205,32 @@ main{
                 color: @button-color-hover;
                 margin-left: 20px;
               }
+          }
+
+        }
+      }
+
+      &:nth-child(2){
+        .flex-content{
+          display: flex;
+          justify-content: space-between;
+
+          .content-range{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height: 100px;
+
+            h3{
+              font-size: 25;
+              font-weight: bold;
+              margin: 0;
+            }
+
+            span{
+              font-size: 12;
+            }
+
           }
 
         }
