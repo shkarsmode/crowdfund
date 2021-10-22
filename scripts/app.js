@@ -15,16 +15,48 @@ const backProjChoose = $('.wrap-proj');
 const disabled = $('.disabled');
 const reward = $('.select button');
 const ul = $('ul');
-const section = $('.sections-wrap > section')
+const section = $('.sections-wrap > section');
+const burger = $('.menu img');
+const popUpBurger = $('.popUp-burger-wrap');
+const burgerContent = $('.burger-content');
+const burgesItem = $('.burger-content div:not(.hor-line)');
+
+burger.addEventListener('click', () => {
+	popUpBurger.style.display = 'flex';
+	popUpBurger.style.opacity = '1';
+});
+
+burgerContent.addEventListener('click', e => {
+	e.stopPropagation();
+}, false)
+
+popUpBurger.addEventListener('click', e => {
+	popUpBurger.style.display = 'none';
+	popUpBurger.style.opacity = '0';
+	e.preventDefalut();
+});
 
 marked.addEventListener('click', function () {
 	marked.classList.toggle('activeMarked');
 	bookmarked.innerHTML = marked.classList[1] ? 'Bookmarked' : 'Add bookmark'
 	addBookmark(this);
+});
+
+burgesItem.forEach(el => {
+	el.addEventListener('click', () => {
+		popUpBurger.style.display = 'none';
+		popUpBurger.style.opacity = '0';
+		switch (el.innerHTML) {
+			case 'About': scroll(section[2].offsetTop + 275); break;
+			case 'Discover': scroll(section[1].offsetTop + 275); break;
+			case 'Get Started': console.log('Get Started'); break;
+		}
+	})
 })
 
 rangeLine.style.width = (parseFloat(current) * 100) / parseFloat(total) + '%';
 popUp.style.height = document.body.offsetHeight + 'px';
+popUpBurger.style.height = document.body.offsetHeight + 'px';
 
 if (disable) disable.innerHTML = 'Out of stock';
 
@@ -59,7 +91,8 @@ function scroll(top) {
 backProject.addEventListener('click', () => {
 	popUp.style.display = 'flex';
 	setTimeout(() => showHidePopUp('1'), 0)
-	popInner.focus();
+	if (window.innerWidth < 750)
+		scroll('20');
 })
 
 popClose.addEventListener('click', e => {
@@ -92,9 +125,8 @@ backProjChoose.forEach(e => {
 		if (!e.classList[1])
 			e.classList.add('active');
 		else e.classList.remove('active');
-
-	})
-})
+	});
+});
 
 reward.forEach(el => {
 	el.addEventListener('click', e => {
@@ -105,6 +137,8 @@ reward.forEach(el => {
 				el.classList.remove('active')
 				if (ind == e.target.dataset.id)
 					el.classList.add('active')
+				if (window.innerWidth < 750)
+					scroll('20');
 			});
 		}
 	});
@@ -118,6 +152,8 @@ ul.addEventListener('click', ul => {
 		case 'Get Started': console.log('Get Started'); break;
 	}
 })
+
+
 
 
 
