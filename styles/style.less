@@ -500,7 +500,7 @@ main{
   z-index: 999;
   background-color: rgba(128, 128, 128, 0.377);
   width: 100%;
-  padding-top: 40px;
+  padding-top: 30px;
   transition: all .3s;
   cursor: alias;
 
@@ -679,6 +679,18 @@ main{
             -webkit-appearance: none;
             margin: 0;
         }
+        
+      }
+      
+      .load{
+        transition: background 0s;
+        position: relative;
+        background: url(../images/Preloader.gif);
+        background-size: 30%;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-color: @button-color;
+        color: transparent;
       }
 
       div{

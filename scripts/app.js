@@ -22,6 +22,8 @@ const burgerContent = $('.burger-content');
 const burgesItem = $('.burger-content div:not(.hor-line)');
 const popUpThank = $('.popUp-thank-wrap');
 const pledgeReward = $('.enterPrice button');
+const popUpThankInner = $('.popUp-thank');
+const buttonThank = $('.popUp-thank button');
 
 let stand = $('.explain .stand');
 let price = $('.explain .price');
@@ -158,31 +160,44 @@ ul.addEventListener('click', ul => {
 	}
 })
 
+popUpThankInner.addEventListener('click', e => e.stopPropagation())
+
 popUpThank.addEventListener('click', () => {
-	popUpThank.style.display = 'none';
+	setTimeout(() => popUpThank.style.display = 'none', 300);
 	popUpThank.style.opacity = '0';
 })
 
 pledgeReward.forEach(el => {
 	el.addEventListener('click', () => {
-		let currentName = $('.active .titleProj h4:first-child').innerText;
-		currentName = currentName.substr(0, currentName.indexOf('Pledge') || currentName.length);
-		const currentPrice = $('.active .enterPrice input').value;
-		stand.innerHTML = currentName;
-		price.innerHTML = currentPrice;
-		popUpThank.style.display = 'flex';
-		setTimeout(() => popUpThank.style.opacity = '1', 400);
+		let button = $('.active button');
+		button.classList.add('load');
+		setTimeout(() => {
+			let currentName = $('.active .titleProj h4:first-child').innerText;
+			currentName = currentName.substr(0, currentName.indexOf('Pledge') || currentName.length);
+			const currentPrice = $('.active .enterPrice input').value;
+			stand.innerHTML = currentName;
+			price.innerHTML = currentPrice;
+			popUpThank.style.display = 'flex';
+			setTimeout(() => popUpThank.style.opacity = '1', 300);
+			popUp.style.opacity = '0';
+			setTimeout(() => showHidePopUp('none'), 300);
+			button.classList.remove('load');
+		}, 3000);
+	});
+});
 
-		popUp.style.opacity = '0';
-		setTimeout(() => showHidePopUp('none'), 300);
-	})
+buttonThank.addEventListener('click', () => {
+	popUpThank.style.opacity = '0';
+	setTimeout(() => popUpThank.style.display = 'none', 300);
 })
 
-window.addEventListener(`resize`, e => {
+
+window.addEventListener(`resize`, () => {
 	if (window.innerWidth > 1440 || window.innerWidth < 375) alert('Warning! This screen resolution is not supported!');
 }, false);
 
-// УБРАТЬ ВСПЫЛИТИЕ У ПОПАП СЕНК
+// Сделать загрузку отправки товара
+// Адаптация поп апа сенк
 
 
 
