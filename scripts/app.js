@@ -172,8 +172,9 @@ pledgeReward.forEach(el => {
 		let button = $('.active button');
 		button.classList.add('load');
 		setTimeout(() => {
-			let currentName = $('.active .titleProj h4:first-child').innerText;
+			let currentName = $('.active .titleProj').innerText;
 			currentName = currentName.substr(0, currentName.indexOf('Pledge') || currentName.length);
+			currentName = currentName.indexOf('Pledge') != -1 ? 'bail for support' : currentName;
 			const currentPrice = $('.active .enterPrice input').value;
 			stand.innerHTML = currentName;
 			price.innerHTML = currentPrice;
@@ -182,7 +183,7 @@ pledgeReward.forEach(el => {
 			popUp.style.opacity = '0';
 			setTimeout(() => showHidePopUp('none'), 300);
 			button.classList.remove('load');
-		}, 3000);
+		}, 000); //3000
 	});
 });
 
@@ -196,7 +197,6 @@ window.addEventListener(`resize`, () => {
 	if (window.innerWidth > 1440 || window.innerWidth < 375) alert('Warning! This screen resolution is not supported!');
 }, false);
 
-// Сделать загрузку отправки товара
 // Адаптация поп апа сенк
 
 
