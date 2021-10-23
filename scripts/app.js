@@ -20,6 +20,11 @@ const burger = $('.menu img');
 const popUpBurger = $('.popUp-burger-wrap');
 const burgerContent = $('.burger-content');
 const burgesItem = $('.burger-content div:not(.hor-line)');
+const popUpThank = $('.popUp-thank-wrap');
+const pledgeReward = $('.enterPrice button');
+
+let stand = $('.explain .stand');
+let price = $('.explain .price');
 
 burger.addEventListener('click', () => {
 	popUpBurger.style.display = 'flex';
@@ -57,7 +62,7 @@ burgesItem.forEach(el => {
 rangeLine.style.width = (parseFloat(current) * 100) / parseFloat(total) + '%';
 popUp.style.height = document.body.offsetHeight + 'px';
 popUpBurger.style.height = document.body.offsetHeight + 'px';
-
+popUpThank.style.height = document.body.offsetHeight + 'px';
 if (disable) disable.innerHTML = 'Out of stock';
 
 function addBookmark(el, url, title) {
@@ -153,7 +158,31 @@ ul.addEventListener('click', ul => {
 	}
 })
 
+popUpThank.addEventListener('click', () => {
+	popUpThank.style.display = 'none';
+	popUpThank.style.opacity = '0';
+})
 
+pledgeReward.forEach(el => {
+	el.addEventListener('click', () => {
+		let currentName = $('.active .titleProj h4:first-child').innerText;
+		currentName = currentName.substr(0, currentName.indexOf('Pledge') || currentName.length);
+		const currentPrice = $('.active .enterPrice input').value;
+		stand.innerHTML = currentName;
+		price.innerHTML = currentPrice;
+		popUpThank.style.display = 'flex';
+		setTimeout(() => popUpThank.style.opacity = '1', 400);
+
+		popUp.style.opacity = '0';
+		setTimeout(() => showHidePopUp('none'), 300);
+	})
+})
+
+window.addEventListener(`resize`, e => {
+	if (window.innerWidth > 1440 || window.innerWidth < 375) alert('Warning! This screen resolution is not supported!');
+}, false);
+
+// УБРАТЬ ВСПЫЛИТИЕ У ПОПАП СЕНК
 
 
 
