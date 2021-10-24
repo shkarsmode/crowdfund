@@ -56,7 +56,7 @@ burgesItem.forEach(el => {
 		switch (el.innerHTML) {
 			case 'About': scroll(section[2].offsetTop + 275); break;
 			case 'Discover': scroll(section[1].offsetTop + 275); break;
-			case 'Get Started': console.log('Get Started'); break;
+			case 'Get Started': alert('Get Started'); break;
 		}
 	})
 })
