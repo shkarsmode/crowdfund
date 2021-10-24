@@ -185,7 +185,7 @@ pledgeReward.forEach(el => {
 			popUp.style.opacity = '0';
 			setTimeout(() => showHidePopUp('none'), 300);
 			button.classList.remove('load');
-		}, 000); //3000
+		}, 3000);
 	});
 });
 
