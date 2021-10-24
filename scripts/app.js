@@ -196,10 +196,5 @@ buttonThank.addEventListener('click', () => {
 
 
 window.addEventListener(`resize`, () => {
-	// if (window.innerWidth > 1440 || window.innerWidth < 375) alert('Warning! This screen resolution is not supported!');
+	if (window.innerWidth > 1440 || window.innerWidth < 375) alert('Warning! This screen resolution is not supported!');
 }, false);
-
-// Адаптация поп апа сенк
-
-
-

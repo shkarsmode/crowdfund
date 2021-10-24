@@ -58,7 +58,7 @@
 						<span>Enter your piedge</span>
 						<div>
 							<span>$</span>
-							<input type="number" min='0' value='0' onkeyup="this.value = this.value.replace(/[\+\-]/g,'');">
+							<input type="number" min='0' max='2' value='0' onkeyup="this.value = this.value.replace(/[\+\-]/g,'');">
 							<button>Continue</button>
 						</div>
 					</div>
@@ -84,7 +84,7 @@
 						<span>Enter your piedge</span>
 						<div>
 							<span>$</span>
-							<input type="number" min='25' value='25' onkeyup="this.value = this.value.replace(/[\+\-]/g,'');">
+							<input type="number" min='25' max='2' value='25' onkeyup="this.value = this.value.replace(/[\+\-]/g,'');">
 							<button>Continue</button>
 						</div>
 					</div>
@@ -110,8 +110,10 @@
 						<span>Enter your piedge</span>
 						<div>
 							<span>$</span>
-							<input type="number" min='75' value='75' onkeyup="this.value = this.value.replace(/[\+\-]/g,'');">
-							<button>Continue</button>
+							<form action="">
+								<input type="number" min='75' max='9999' value='75' onkeyup="this.value = this.value.replace(/[\+\-]/g,'');">
+								<button type='submit'>Continue</button>
+							</form>
 						</div>
 					</div>
 				</div>
@@ -136,7 +138,7 @@
 						<span>Enter your piedge</span>
 						<div>
 							<span>$</span>
-							<input type="number" min='0' value='0' onkeyup="this.value = this.value.replace(/[\+\-]/g,'');">
+							<input type="number" min='0' value='0' max='2' onkeyup="this.value = this.value.replace(/[\+\-]/g,'');">
 							<button>Continue</button>
 						</div>
 					</div>
