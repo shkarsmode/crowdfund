@@ -138,6 +138,7 @@ backProjChoose.forEach(e => {
 reward.forEach(el => {
 	el.addEventListener('click', e => {
 		if (!e.target.parentNode.parentNode.classList[0]) {
+			scroll('0');
 			popUp.style.display = 'flex';
 			setTimeout(() => showHidePopUp('1'), 0);
 			backProjChoose.forEach((el, ind) => {
@@ -195,7 +196,7 @@ buttonThank.addEventListener('click', () => {
 
 
 window.addEventListener(`resize`, () => {
-	if (window.innerWidth > 1440 || window.innerWidth < 375) alert('Warning! This screen resolution is not supported!');
+	// if (window.innerWidth > 1440 || window.innerWidth < 375) alert('Warning! This screen resolution is not supported!');
 }, false);
 
 // Адаптация поп апа сенк
