@@ -1,5 +1,6 @@
 // main: style.less
 
+// Variables
 @main-background: #fafafa;
 @button-color: #3eb2af;
 @span-color: #56b8a9;
@@ -13,4 +14,28 @@
 @font: 'Commissioner', sans-serif;
 @white-color: #fff;
 @black: #000;
+@white: #fff;
 @block-background: #fff;
+
+// Functions
+.button(@width, @height) {
+  button {
+    width: @width;
+    height: @height;
+    position: relative;
+    color: @white-color;
+    border: none;
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+    background-color: @button-color;
+    cursor: pointer;
+    font-weight: 700;
+    transition: background .3s;
+
+    &:hover {
+      background-color: @button-color-hover;
+    }
+  }
+}
