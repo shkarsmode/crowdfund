@@ -178,6 +178,7 @@ pledgeReward.forEach(el => {
 			const currentPrice = $('.active .enterPrice input').value;
 			stand.innerHTML = currentName;
 			price.innerHTML = currentPrice;
+			// if(price)
 			popUpThank.style.display = 'flex';
 			setTimeout(() => popUpThank.style.opacity = '1', 300);
 			popUp.style.opacity = '0';
